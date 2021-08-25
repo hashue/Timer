@@ -24,7 +24,6 @@ function countDown() {
         audio.play();
     } else {
         time--;
-        console.log({ count_interval });
         updateTime(time);
     }
 }

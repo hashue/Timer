@@ -555,7 +555,7 @@ pug@^3.0.0:
 
 push.js@^1.0.12:
   version "1.0.12"
-  resolved "https://registry.npmjs.org/push.js/-/push.js-1.0.12.tgz"
+  resolved "https://registry.yarnpkg.com/push.js/-/push.js-1.0.12.tgz#5703a03f5d286cd46d58564cb27bc079898d26b1"
   integrity sha512-Mo/zkrPD58hcbMvC/9WveUPGz0PJ4T5UwQJP6DnMYbyxe7b1xM/9qqmJTMmDcprbZjCtLzf9wWtek7gA8O9QBw==
 
 regenerator-runtime@^0.11.0:

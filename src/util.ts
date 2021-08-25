@@ -10,6 +10,10 @@ function formValue(key: string): string {
     }
     return DOM.value;
 }
+function setFormValue(key: string,value:number){
+    let DOM: HTMLInputElement = <HTMLInputElement>document.getElementById(key);
+    DOM.value = value.toString();
+}
 
 /**
  * zeroPadding.
@@ -20,4 +24,17 @@ function formValue(key: string): string {
  */
 function zeroPadding(num: number, len: number): string {
     return (Array(len).join("0") + num).slice(-len);
+}
+
+/**
+ * sendPushNotification.
+ *
+ * @param {string} subject
+ * @param {string} body
+ */
+function sendPushNotification(subject:string, body:string) {
+  Push.create(subject, {
+    body: body,
+    timeout: 6000,
+  });
 }

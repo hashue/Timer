@@ -12,6 +12,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="style.css" />
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js"></script>
 
         <title>Focusaid</title>
     </head>
@@ -58,11 +59,11 @@
                 <button id="use_btn"
                         class="preset"
                         class="preset_btn"
-                        onclick="setPresetValue(this)"
+                        onclick="applyPreset(this)"
                         >
                         使用
                 </button>
-                    <button id="save_pattern" onclick="savePattern()">
+                    <button id="save_pattern" onclick="generatePattern()">
                         プリセットを作成
                     </button>
                     <button
@@ -97,6 +98,7 @@
             </div>
             <script src="./dist/index.js"></script>
             <script src="./dist/util.js"></script>
+            <script src="./dist/preset.js"></script>
         </div>
     </body>
 </html>

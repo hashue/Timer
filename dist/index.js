@@ -1,5 +1,5 @@
 "use strict";
-const audio = new Audio('./Clock-Alarm03-01(Loop).mp3');
+const audio = new Audio("./Clock-Alarm03-01(Loop).mp3");
 let time;
 let count_interval;
 /**
@@ -43,7 +43,7 @@ function convertToTime(time) {
  * @param {number} time
  */
 function updateTime(time) {
-    let nowtime = document.getElementById("nowtime");
+    let nowtime = (document.getElementById("nowtime"));
     nowtime.textContent = convertToTime(time);
 }
 function resetTime() {

@@ -11,6 +11,10 @@ function formValue(key) {
     }
     return DOM.value;
 }
+function setFormValue(key, value) {
+    let DOM = document.getElementById(key);
+    DOM.value = value.toString();
+}
 /**
  * zeroPadding.
  *
@@ -19,5 +23,17 @@ function formValue(key) {
  * @returns {string}
  */
 function zeroPadding(num, len) {
-    return (Array(len).join('0') + num).slice(-len);
+    return (Array(len).join("0") + num).slice(-len);
+}
+/**
+ * sendPushNotification.
+ *
+ * @param {string} subject
+ * @param {string} body
+ */
+function sendPushNotification(subject, body) {
+    Push.create(subject, {
+        body: body,
+        timeout: 6000,
+    });
 }
