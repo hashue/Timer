@@ -3,8 +3,6 @@
     "prettier": "^2.1.2"
   },
   "dependencies": {
-    "pug": "^3.0.0",
-    "pug-cli": "^1.0.0-alpha6",
     "push.js": "^1.0.12"
   }
 }
