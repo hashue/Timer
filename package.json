@@ -1,8 +1,16 @@
 {
-  "devDependencies": {
-    "prettier": "^2.1.2"
-  },
+  "name": "Timer",
+  "version": "1.0.0",
+  "description": "Pomodoro Timer",
+  "main": "index.js",
+  "repository": "git@github.com:hashue/Timer.git",
+  "author": "Hasu <hshue83@gmail.com>",
+  "license": "zlib",
+  "private": true,
   "dependencies": {
     "push.js": "^1.0.12"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
   }
 }

@@ -203,15 +203,15 @@ button#start,
 }
 
 .start_img {
-  background-image: url('img/start.png');
+  background-image: url('src/img/start.png');
 }
 
 .break_img {
-  background-image: url('img/break.png');
+  background-image: url('src/img/break.png');
 }
 
 .stop_img {
-  background-image: url('img/stop.png');
+  background-image: url('src/img/stop.png');
 }
 
 @media (prefers-color-scheme: dark) {
