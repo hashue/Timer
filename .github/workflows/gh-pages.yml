@@ -29,6 +29,7 @@ jobs:
 
       - run: npm i -g typescript
       - run: npm i -g @types/node
+      - run: npm install
       - run: tsc
 
       - name: Deploy
