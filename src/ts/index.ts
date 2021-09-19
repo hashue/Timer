@@ -1,3 +1,4 @@
+import { formValue } from "./util.js";
 const audio = new Audio("./src/sound/sound.mp3");
 let time: number;
 let count_interval: number;
@@ -16,7 +17,7 @@ function prepareTime(kind: stat) {
   time =
     parseInt(formValue(`${kind}_min`)) * 60 +
     parseInt(formValue(`${kind}_sec`));
-  count_interval = setInterval(countDown, 1000);
+  count_interval = window.setInterval(countDown, 1000);
 }
 
 function countDown() {
@@ -37,7 +38,9 @@ function countDown() {
 function convertToTime(time: number): string {
   let min = Math.floor(time / 60);
   let sec = Math.floor(time % 60);
-  return `${zeroPadding(min, 2)}:${zeroPadding(sec, 2)}`;
+  return `${min.toString().padStart(2, "0")}:${sec
+    .toString()
+    .padStart(2, "0")}`;
 }
 
 /**

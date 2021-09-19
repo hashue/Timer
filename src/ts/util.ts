@@ -4,14 +4,14 @@ import Push from "push.js";
  * @function formValue
  * @param {string} key - 取得するDOMのid
  */
-function formValue(key: string): string {
+export function formValue(key: string): string {
   let DOM: HTMLInputElement = <HTMLInputElement>document.getElementById(key);
   if (DOM.value == "") {
     DOM.value = "0";
   }
   return DOM.value;
 }
-function setFormValue(key: string, value: number) {
+export function setFormValue(key: string, value: number) {
   let DOM: HTMLInputElement = <HTMLInputElement>document.getElementById(key);
   DOM.value = value.toString();
 }

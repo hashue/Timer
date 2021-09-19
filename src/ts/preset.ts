@@ -1,4 +1,5 @@
 import Push from "push.js";
+import { setFormValue } from "./util.js";
 const preset_elm: HTMLInputElement = <HTMLInputElement>(
   document.getElementById("preset")
 );
@@ -92,10 +93,12 @@ function savePattern(preset_obj: Preset, preset_name: string) {
 
 function applyPreset() {
   let no: HTMLInputElement = <HTMLInputElement>(
-    document.getElementById("preset").value
+    document.getElementById("preset")
   );
-  key_name = localStorage.key(no);
-  let extracted_val = JSON.parse(localStorage.getItem(key_name));
+  key_name = localStorage.key(parseInt(no.value));
+  let extracted_val = JSON.parse(
+    localStorage.getItem(key_name as string) || "{}"
+  );
 
   setFormValue("focus_min", extracted_val.work_min / 60);
   setFormValue("focus_sec", extracted_val.work_sec);
@@ -104,7 +107,7 @@ function applyPreset() {
 }
 
 function removePreset(btn: HTMLInputElement) {
-  key_name = localStorage.key(btn.value);
-  localStorage.removeItem(key_name);
+  key_name = localStorage.key(parseInt(btn.value));
+  localStorage.removeItem(key_name as string);
   location.reload();
 }
