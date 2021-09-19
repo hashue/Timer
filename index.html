@@ -12,7 +12,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="src/stylesheet/style.css" />
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js"></script>
 
         <title>Focusaid</title>
     </head>
@@ -83,7 +82,7 @@
             </div>
 
             <div class="button">
-                <button id="start" type="button" onclick="prepareTime('focus')">
+                <button id="start" type="button" >
                     スタート
                     <div class="start_img" id="div"></div>
                     <br /></button>
@@ -96,9 +95,7 @@
                     <div class="stop_img" id="div"></div>
                 </button>
             </div>
-            <script src="./dist/index.js"></script>
-            <script src="./dist/util.js"></script>
-            <script src="./dist/preset.js"></script>
         </div>
+        <script src='./bundle.js'></script>
     </body>
 </html>
