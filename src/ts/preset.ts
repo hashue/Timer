@@ -1,3 +1,4 @@
+import Push from "push.js";
 const preset_elm: HTMLInputElement = <HTMLInputElement>(
   document.getElementById("preset")
 );

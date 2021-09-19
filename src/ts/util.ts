@@ -1,3 +1,4 @@
+import Push from "push.js";
 /**
  * formの値を取得する
  * @function formValue

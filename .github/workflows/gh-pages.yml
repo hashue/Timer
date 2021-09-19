@@ -28,6 +28,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm i -g typescript
+      - run: npm i -g @types/node
       - run: tsc
 
       - name: Deploy
@@ -35,4 +36,4 @@ jobs:
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./dist
